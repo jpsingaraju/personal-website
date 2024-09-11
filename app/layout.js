@@ -1,8 +1,10 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({ children }) {
   return (
     <html>
+      <Analytics />
       <head>
         <link rel="icon" href="/personal-pic.png" />
         <title>Jathin Pranav Singaraju</title>
