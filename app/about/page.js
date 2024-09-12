@@ -1,20 +1,24 @@
 import React from "react";
 import Link from "next/link";
-import { FaHome, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import {
+  FaHome,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
   FaReact,
   FaPython,
-  FaNodeJs,
+  FaHtml5,
   FaAws,
-  FaGithubAlt,
+  FaJava,
 } from "react-icons/fa";
+import { FaXTwitter, FaMaskFace } from "react-icons/fa6";
 import {
-  SiTensorflow,
   SiNextdotjs,
   SiTailwindcss,
-  SiMongodb,
-  SiDocker,
+  SiTensorflow,
+  SiFlutter,
+  SiGooglecloud,
+  SiC,
 } from "react-icons/si";
 
 const NavIcon = ({ Icon, href, color }) => (
@@ -38,7 +42,9 @@ const Section = ({ title, children }) => (
 );
 
 const TimelineItem = ({ logo, company, title, date, isLeft }) => (
-  <div className={`flex items-center mb-8 ${isLeft ? "flex-row-reverse" : ""}`}>
+  <div
+    className={`flex items-center mb-16 ${isLeft ? "flex-row-reverse" : ""}`}
+  >
     <div className={`w-1/2 ${isLeft ? "text-right pr-8" : "pl-8"}`}>
       <h3 className="text-sm md:text-md sm:text-lg font-semibold text-gray-800">
         {title}
@@ -47,7 +53,7 @@ const TimelineItem = ({ logo, company, title, date, isLeft }) => (
       <p className="text-xs md:text-sm text-gray-500">{date}</p>
     </div>
     <div className="relative">
-      <div className="w-12 sm:w-16 h-12 sm:h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center z-10 relative">
+      <div className="w-12 sm:w-16 h-12 sm:h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center relative">
         <img
           src={logo}
           alt={company}
@@ -59,7 +65,7 @@ const TimelineItem = ({ logo, company, title, date, isLeft }) => (
   </div>
 );
 
-const ProjectCard = ({ logo, title, subtitle, description, link }) => (
+const ProjectCard = ({ logo, title, details, subtitle, description, link }) => (
   <a
     href={link}
     target="_blank"
@@ -70,17 +76,18 @@ const ProjectCard = ({ logo, title, subtitle, description, link }) => (
       <div className="flex items-center space-x-4 mb-4">
         <img
           src={logo}
+          className="w-10 sm:w-12 object-contain rounded-full"
           alt={title}
-          className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-full bg-gray-100"
         />
         <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 mb-2">
             {title}
           </h3>
-          <p className="text-gray-600">{subtitle}</p>
+          <p className="text-gray-600 font-medium">{details}</p>
         </div>
       </div>
       <p className="text-sm sm:text-base text-gray-700">{description}</p>
+      <p className="text-gray-600 pt-4 font-extralight text-sm">{subtitle}</p>
     </div>
   </a>
 );
@@ -88,6 +95,42 @@ const ProjectCard = ({ logo, title, subtitle, description, link }) => (
 const TechStack = () => (
   <Section title="Tech Stack">
     <div className="flex flex-wrap gap-6 sm:gap-8 justify-center items-center">
+      <div className="relative group">
+        <FaPython className="text-yellow-400" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Python
+        </span>
+      </div>
+      <div className="relative group">
+        <FaJava className="text-red-600" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Java
+        </span>
+      </div>
+      <div className="relative group">
+        <SiC className="text-blue-600" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          C
+        </span>
+      </div>
+      <div className="relative group">
+        <FaHtml5 className="text-orange-500" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          HTML5
+        </span>
+      </div>
+      <div className="relative group">
+        <FaAws className="text-orange-400" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          AWS
+        </span>
+      </div>
+      <div className="relative group">
+        <SiGooglecloud className="text-blue-600" size={36} sm={48} />
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Google Cloud
+        </span>
+      </div>
       <div className="relative group">
         <FaReact className="text-blue-500" size={36} sm={48} />
         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -101,9 +144,9 @@ const TechStack = () => (
         </span>
       </div>
       <div className="relative group">
-        <FaPython className="text-yellow-400" size={36} sm={48} />
+        <SiTailwindcss className="text-teal-500" size={36} sm={48} />
         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Python
+          Tailwind CSS
         </span>
       </div>
       <div className="relative group">
@@ -113,37 +156,13 @@ const TechStack = () => (
         </span>
       </div>
       <div className="relative group">
-        <FaNodeJs className="text-green-500" size={36} sm={48} />
+        <SiFlutter className="text-blue-400" size={36} sm={48} />
         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Node.js
+          Flutter
         </span>
       </div>
       <div className="relative group">
-        <SiTailwindcss className="text-teal-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Tailwind CSS
-        </span>
-      </div>
-      <div className="relative group">
-        <SiMongodb className="text-green-700" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          MongoDB
-        </span>
-      </div>
-      <div className="relative group">
-        <FaAws className="text-orange-400" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          AWS
-        </span>
-      </div>
-      <div className="relative group">
-        <SiDocker className="text-blue-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Docker
-        </span>
-      </div>
-      <div className="relative group">
-        <FaGithubAlt className="text-gray-800" size={36} sm={48} />
+        <FaGithub className="text-gray-800" size={36} sm={48} />
         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           GitHub
         </span>
@@ -194,20 +213,49 @@ export default function PersonalShowcase() {
 
   const projects = [
     {
-      logo: "/project-logo1.png",
-      title: "AI Chatbot",
-      subtitle: "Python • TensorFlow",
+      logo: "grade-genius.png",
+      title: "Grade Genius",
+      details: "750+ users",
+      subtitle: "Flutter • Flask • GCP",
       description:
-        "Developed an AI-powered chatbot capable of understanding and responding to complex user queries with high accuracy.",
-      link: "https://github.com/yourusername/ai-chatbot",
+        "Intuitive and multifaceted gradebook mobile app for the Frisco Indepdent School District.",
+      link: "https://www.youtube.com/watch?v=3qaAxZTMLfk&t=12s&ab_channel=JathinPranavSingaraju",
     },
     {
-      logo: "/project-logo2.png",
-      title: "Personal Portfolio",
-      subtitle: "React • Next.js",
+      logo: "facemask.png",
+      title: "Face Mask Detector",
+      details: "2K+ downloads",
+      subtitle: "TensorFlow • Keras",
       description:
-        "Designed and built a responsive personal portfolio website showcasing projects and skills with a modern, intuitive interface.",
-      link: "https://github.com/yourusername/portfolio",
+        "ML algorithm and dataset to identify masks on people's faces during COVID-19.",
+      link: "https://www.youtube.com/watch?v=KhQo-jdlRg0&ab_channel=JathinPranavSingaraju",
+    },
+    {
+      logo: "ecogo.png",
+      title: "EcoGo",
+      details: "SDHacks",
+      subtitle: "HTML • SvelteKit • SQLite",
+      description:
+        "Simple web app that provides information on one's contribution to sustainability.",
+      link: "https://devpost.com/software/ecogo-w3lzc9",
+    },
+    {
+      logo: "share.png",
+      title: "Share.",
+      details: "PennApps",
+      subtitle: "Flutter • Flask",
+      description:
+        "Financial web app for beginners to to learn about and enjoy the thrills of the stock market.",
+      link: "https://devpost.com/software/sharez",
+    },
+    {
+      logo: "spaceverse.png",
+      title: "Spaceverse",
+      details: "HackUNT",
+      subtitle: "React • MongoDB",
+      description:
+        "End-to-end web app to educate the community about everything in the universe.",
+      link: "https://devpost.com/software/spaceverse-yah3tl",
     },
   ];
 
@@ -246,7 +294,7 @@ export default function PersonalShowcase() {
       </nav>
       <main className="max-w-4xl mx-auto py-12 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mt-8 mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mt-8 mb-8">
             About Me
           </h1>
           <p className="text-sm sm:text-lg text-gray-700 mt-2 leading-relaxed md:text-md">
@@ -268,14 +316,14 @@ export default function PersonalShowcase() {
             ))}
           </div>
         </Section>
-        {/* <Section title="Projects">
+        <Section title="Projects">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
         </Section>
-        <TechStack /> */}
+        <TechStack />
       </main>
     </div>
   );
