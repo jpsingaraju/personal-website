@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     <html>
       <Analytics />
       <head>
-        <link rel="icon" href="/personal-pic.png" />
+        <link rel="icon" href="/circular-photo.png" />
         <title>Jathin Pranav Singaraju</title>
       </head>
       <body className="h-full w-full bg-off-white">{children}</body>
