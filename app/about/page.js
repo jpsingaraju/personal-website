@@ -11,7 +11,7 @@ import {
   FaAws,
   FaJava,
 } from "react-icons/fa";
-import { FaXTwitter, FaMaskFace } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -53,11 +53,11 @@ const TimelineItem = ({ logo, company, title, date, isLeft }) => (
       <p className="text-xs md:text-sm text-gray-500">{date}</p>
     </div>
     <div className="relative">
-      <div className="w-12 sm:w-16 h-12 sm:h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center relative">
+      <div className="w-16 h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center relative">
         <img
           src={logo}
           alt={company}
-          className="w-10 sm:w-12 h-10 sm:h-12 object-contain rounded-full"
+          className="w-14 h-14 object-contain rounded-full"
         />
       </div>
     </div>
@@ -97,73 +97,73 @@ const TechStack = () => (
     <div className="flex flex-wrap gap-6 sm:gap-8 justify-center items-center">
       <div className="relative group">
         <FaPython className="text-yellow-400" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Python
         </span>
       </div>
       <div className="relative group">
         <FaJava className="text-red-600" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Java
         </span>
       </div>
       <div className="relative group">
         <SiC className="text-blue-600" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           C
         </span>
       </div>
       <div className="relative group">
         <FaHtml5 className="text-orange-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           HTML5
         </span>
       </div>
       <div className="relative group">
         <FaAws className="text-orange-400" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           AWS
         </span>
       </div>
       <div className="relative group">
         <SiGooglecloud className="text-blue-600" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Google Cloud
         </span>
       </div>
       <div className="relative group">
         <FaReact className="text-blue-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           React.js
         </span>
       </div>
       <div className="relative group">
         <SiNextdotjs className="text-black" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Next.js
         </span>
       </div>
       <div className="relative group">
         <SiTailwindcss className="text-teal-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Tailwind CSS
         </span>
       </div>
       <div className="relative group">
         <SiTensorflow className="text-orange-500" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           TensorFlow
         </span>
       </div>
       <div className="relative group">
         <SiFlutter className="text-blue-400" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           Flutter
         </span>
       </div>
       <div className="relative group">
         <FaGithub className="text-gray-800" size={36} sm={48} />
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 sm:translate-y-10 bg-gray-800 text-white text-xs sm:text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
           GitHub
         </span>
       </div>
