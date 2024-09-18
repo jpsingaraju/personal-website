@@ -22,7 +22,7 @@ export default function Home() {
               About Me
             </Link>
             <a
-              href="mailto:pran.singaraju@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
+              href="mailto:jathinpsingaraju@berkeley.edu?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
               className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
             >
               Contact Me
