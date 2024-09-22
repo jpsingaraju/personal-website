@@ -65,7 +65,15 @@ const TimelineItem = ({ logo, company, title, date, isLeft }) => (
   </div>
 );
 
-const ProjectCard = ({ logo, title, details, subtitle, description, link }) => (
+const ProjectCard = ({
+  logo,
+  title,
+  details,
+  subtitle,
+  stats,
+  description,
+  link,
+}) => (
   <a
     href={link}
     target="_blank"
@@ -87,7 +95,10 @@ const ProjectCard = ({ logo, title, details, subtitle, description, link }) => (
         </div>
       </div>
       <p className="text-sm sm:text-base text-gray-700">{description}</p>
-      <p className="text-gray-600 pt-4 font-extralight text-sm">{subtitle}</p>
+      <div className="flex justify-between pt-4">
+        <p className="text-gray-600 font-extralight text-sm">{subtitle}</p>
+        <p className="text-gray-600 font-extralight text-sm">{stats}</p>
+      </div>
     </div>
   </a>
 );
@@ -213,10 +224,20 @@ export default function PersonalShowcase() {
 
   const projects = [
     {
+      logo: "crime-watch.png",
+      title: "Crime Watch",
+      details: "Personal Hack",
+      subtitle: "Palantir Foundry • AIP",
+      description:
+        "AI-based dashboard to analyze the severity of crimes in LA from 2020 to 2024.",
+      link: "https://x.com/jp_singaraju/status/1837926719116005680",
+    },
+    {
       logo: "grade-genius.png",
       title: "Grade Genius",
-      details: "750+ users",
+      details: "Personal Hack",
       subtitle: "Flutter • Flask • GCP",
+      stats: "750+ users",
       description:
         "Intuitive and multifaceted gradebook mobile app for the Frisco Indepdent School District.",
       link: "https://www.youtube.com/watch?v=3qaAxZTMLfk&t=12s&ab_channel=JathinPranavSingaraju",
@@ -224,8 +245,9 @@ export default function PersonalShowcase() {
     {
       logo: "facemask.png",
       title: "Face Mask Detector",
-      details: "2K+ downloads",
+      details: "Personal Hack",
       subtitle: "TensorFlow • Keras",
+      stats: "2K+ downloads",
       description:
         "ML algorithm and dataset to identify masks on people's faces during COVID-19.",
       link: "https://www.youtube.com/watch?v=KhQo-jdlRg0&ab_channel=JathinPranavSingaraju",
@@ -235,6 +257,7 @@ export default function PersonalShowcase() {
       title: "EcoGo",
       details: "SDHacks",
       subtitle: "HTML • SvelteKit • SQLite",
+      stats: "1st Place",
       description:
         "Simple web app that provides information on one's contribution to sustainability.",
       link: "https://devpost.com/software/ecogo-w3lzc9",
