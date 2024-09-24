@@ -12,7 +12,7 @@ export default function Home() {
             Jathin Pranav Singaraju
           </h1>
           <p className="text-xl md:text-2xl text-gray-700">
-            Student. Entrepreneur. Adventurer.
+            Student. Developer. Adventurer.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <Link
@@ -22,14 +22,14 @@ export default function Home() {
               About Me
             </Link>
             <a
-              href="mailto:jathinpsingaraju@berkeley.edu?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
+              href="mailto:pran.singaraju@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
               className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
             >
               Contact Me
             </a>
           </div>
         </div>
-        <div className="flex gap-8 ml-4 pt-12">
+        <div className="flex gap-8 ml-2 pt-12">
           <a
             href="https://www.linkedin.com/in/jathin-pranav-singaraju/"
             target="_blank"

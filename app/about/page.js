@@ -291,6 +291,14 @@ export default function PersonalShowcase() {
               <FaHome className="h-6 w-6 text-gray-800 hover:text-slate-500 transition-colors duration-300" />
             </Link>
             <div className="flex items-center space-x-6">
+              <Link
+                href="https://sites.google.com/view/jps-art-portfolio/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative text-gray-400 flex items-center justify-center gap-2 py-2 px-4 border border-gray-400 rounded-md transition-all duration-300 hover:bg-gray-800 hover:text-white hover:border-gray-600 group"
+              >
+                <span>Art Portfolio</span>
+              </Link>
               <NavIcon
                 Icon={FaLinkedin}
                 href="https://www.linkedin.com/in/jathin-pranav-singaraju/"
@@ -328,7 +336,17 @@ export default function PersonalShowcase() {
             building cool side projects 😉). And when I'm not doing that, I'm
             off on an adventure exploring unknown places 🌋. But most likely,
             you'll catch me "dunking" on the basketball court 🏀 or glued to the
-            TV watching Steph Curry drain threes 📺!
+            TV watching Steph Curry drain threes 📺! By the way, I love doing
+            art 🎨, click
+            <a
+              href="https://sites.google.com/view/jps-art-portfolio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-sm sm:text-lg text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 hover:from-green-400 hover:to-purple-400 transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer ml-1"
+            >
+              here{" "}
+            </a>
+            or click the button at the top!
           </p>
         </div>
         <Section>
