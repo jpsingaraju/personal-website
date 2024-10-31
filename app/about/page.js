@@ -224,6 +224,35 @@ export default function PersonalShowcase() {
 
   const projects = [
     {
+      logo: "eyedentity-logo.jpg",
+      title: "EYEdentity",
+      details: "CalHacks",
+      stats: "1st Place",
+      subtitle: "Lens Studio • Flask • Face Recognition",
+      description:
+        "The JARVIS for first responders - designed to help healthcare professionals.",
+      link: "https://devpost.com/software/eyedentity",
+    },
+    {
+      logo: "nova-ai-logo.jpg",
+      title: "Nova AI",
+      details: "CalHacks",
+      stats: "2nd Place",
+      subtitle: "NextJS • Flask • Google API",
+      description:
+        "An automated personal assistant that turns email actionable items into calendar events.",
+      link: "https://devpost.com/software/nova-your-automated-pa",
+    },
+    {
+      logo: "just-hurry-logo.jpg",
+      title: "Just Hurry!",
+      details: "HackHarvard",
+      subtitle: "NextJS • Palantir Foundry • AIP • Tensorflow",
+      description:
+        "ML-based hurricane relief tool for disaster teams and people in emergency situations.",
+      link: "https://devpost.com/software/just-hurry",
+    },
+    {
       logo: "crime-watch.png",
       title: "Crime Watch",
       details: "Personal Hack",
