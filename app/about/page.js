@@ -88,10 +88,10 @@ const ProjectCard = ({
           alt={title}
         />
         <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 mb-2">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-gray-600 font-medium">{details}</p>
+          <p className="text-gray-600 font-light text-sm">{details}</p>
         </div>
       </div>
       <p className="text-sm sm:text-base text-gray-700">{description}</p>
@@ -224,13 +224,22 @@ export default function PersonalShowcase() {
 
   const projects = [
     {
+      logo: "kinetik-logo.png",
+      title: "Kinetik",
+      details: "The Future of Work",
+      subtitle: "NextJS • Flask",
+      description:
+        "Let us handle your technical dev, so you can focus more on running your business.",
+      link: "https://kinetikgigs.com",
+    },
+    {
       logo: "eyedentity-logo.jpg",
       title: "EYEdentity",
       details: "CalHacks",
       stats: "1st Place",
       subtitle: "Lens Studio • Flask • Face Recognition",
       description:
-        "The JARVIS for first responders - designed to help healthcare professionals.",
+        "JARVIS for first responders—using facial recognition for instant patient data access.",
       link: "https://devpost.com/software/eyedentity",
     },
     {
@@ -240,23 +249,23 @@ export default function PersonalShowcase() {
       stats: "2nd Place",
       subtitle: "NextJS • Flask • Google API",
       description:
-        "An automated personal assistant that turns email actionable items into calendar events.",
+        "Automated PA that turns actionable items from emails into calendar events.",
       link: "https://devpost.com/software/nova-your-automated-pa",
     },
     {
       logo: "just-hurry-logo.jpg",
       title: "Just Hurry!",
       details: "HackHarvard",
-      subtitle: "NextJS • Palantir Foundry • AIP • Tensorflow",
+      subtitle: "NextJS • MongoDB • Flask • Foundry",
       description:
-        "ML-based hurricane relief tool for disaster teams and people in emergency situations.",
+        "ML-driven platform that streamlines hurricane relief through efficient resource allocation.",
       link: "https://devpost.com/software/just-hurry",
     },
     {
       logo: "crime-watch.png",
       title: "Crime Watch",
       details: "Personal Hack",
-      subtitle: "Palantir Foundry • AIP",
+      subtitle: "Foundry • AIP",
       description:
         "AI-based dashboard to analyze the severity of crimes in LA from 2020 to 2024.",
       link: "https://x.com/jp_singaraju/status/1837926719116005680",
@@ -365,7 +374,7 @@ export default function PersonalShowcase() {
             building cool side projects 😉). And when I'm not doing that, I'm
             off on an adventure exploring unknown places 🌋. But most likely,
             you'll catch me "dunking" on the basketball court 🏀 or glued to the
-            TV watching Steph Curry drain threes 📺! By the way, I love doing
+            TV watching Steph Curry drain threes 📺! Oh, and I also love doing
             art 🎨, click
             <a
               href="https://sites.google.com/view/jps-art-portfolio/home"
@@ -375,7 +384,7 @@ export default function PersonalShowcase() {
             >
               here{" "}
             </a>
-            or click the button at the top!
+            or click the button at the top to see my artwork!
           </p>
         </div>
         <Section>
