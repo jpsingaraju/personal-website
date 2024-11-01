@@ -339,22 +339,22 @@ export default function PersonalShowcase() {
               </Link>
               <NavIcon
                 Icon={FaLinkedin}
-                href="https://www.linkedin.com/in/jathin-pranav-singaraju/"
+                href="https://www.linkedin.com/in/jpsingaraju/"
                 color="text-blue-600"
               />
               <NavIcon
                 Icon={FaGithub}
-                href="https://github.com/jp-singaraju"
+                href="https://github.com/jpsingaraju"
                 color="text-purple-700"
               />
               <NavIcon
                 Icon={FaXTwitter}
-                href="https://twitter.com/jp_singaraju"
+                href="https://twitter.com/jpsingaraju"
                 color="text-black"
               />
               <NavIcon
                 Icon={FaInstagram}
-                href="https://instagram.com/jp_singaraju"
+                href="https://instagram.com/jpsingaraju"
                 color="text-pink-600"
               />
             </div>
