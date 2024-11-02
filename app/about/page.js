@@ -247,7 +247,7 @@ export default function PersonalShowcase() {
       title: "Nova AI",
       details: "CalHacks",
       stats: "2nd Place",
-      subtitle: "NextJS • Flask • Google API",
+      subtitle: "OpenAI API • Flask • Google API",
       description:
         "Automated PA that turns actionable items from emails into calendar events.",
       link: "https://devpost.com/software/nova-your-automated-pa",
