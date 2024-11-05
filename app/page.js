@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="flex gap-8 ml-2 pt-12">
           <a
-            href="https://www.linkedin.com/in/jathin-pranav-singaraju/"
+            href="https://www.linkedin.com/in/jpsingaraju/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -39,7 +39,7 @@ export default function Home() {
             <FaLinkedin size={32} />
           </a>
           <a
-            href="https://github.com/jp-singaraju"
+            href="https://github.com/jpsingaraju"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-purple-700 transition-colors"
@@ -47,7 +47,7 @@ export default function Home() {
             <FaGithub size={32} />
           </a>
           <a
-            href="https://twitter.com/jp_singaraju"
+            href="https://twitter.com/jpsingaraju"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-black transition-colors"
@@ -55,7 +55,7 @@ export default function Home() {
             <FaXTwitter size={32} />
           </a>
           <a
-            href="https://instagram.com/jp_singaraju"
+            href="https://instagram.com/jpsingaraju"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-pink-600 transition-colors"
