@@ -224,15 +224,6 @@ export default function PersonalShowcase() {
 
   const projects = [
     {
-      logo: "kinetik-logo.png",
-      title: "Kinetik",
-      details: "The Future of Work",
-      subtitle: "NextJS • Flask",
-      description:
-        "Let us handle your technical dev, so you can focus more on running your business.",
-      link: "https://kinetikgigs.com",
-    },
-    {
       logo: "eyedentity-logo.jpg",
       title: "EYEdentity",
       details: "CalHacks",
