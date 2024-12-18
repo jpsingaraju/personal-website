@@ -214,12 +214,6 @@ export default function PersonalShowcase() {
       title: "Software Engineering Intern",
       date: "Jun 2022 - Aug 2022",
     },
-    {
-      logo: "/cuttr-logo.jpeg",
-      company: "Cuttr",
-      title: "Co-Founder and CEO",
-      date: "Dec 2021 - Jan 2023",
-    },
   ];
 
   const projects = [
