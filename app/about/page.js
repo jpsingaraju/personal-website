@@ -187,7 +187,7 @@ export default function PersonalShowcase() {
     {
       logo: "/hp-logo.png",
       company: "HP Inc.",
-      title: "Software Engineering Intern",
+      title: "Software Engineer Intern",
       date: "May 2024 - Aug 2024",
     },
     {
@@ -199,7 +199,7 @@ export default function PersonalShowcase() {
     {
       logo: "/cyqiq-logo.jpeg",
       company: "Cyqiq AI",
-      title: "Software Engineering Intern",
+      title: "Software Engineer Intern",
       date: "Oct 2023 - Mar 2024",
     },
     {
@@ -211,7 +211,7 @@ export default function PersonalShowcase() {
     {
       logo: "/empowermx-logo.jpeg",
       company: "EmpowerMX",
-      title: "Software Engineering Intern",
+      title: "Software Engineer Intern",
       date: "Jun 2022 - Aug 2022",
     },
   ];
