@@ -1,136 +1,211 @@
-import React from "react";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+"use client";
+
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-gradient-to-r from-slate-500/40 via-white to-sky-200/70 flex items-center justify-center">
-      <div className="hidden lg:flex absolute inset-0 flex-col justify-center items-start pl-28 z-20">
-        <div className="max-w-2xl space-y-6">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
-            Jathin Pranav Singaraju
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 font-mono">
+      <main className="max-w-2xl w-full space-y-6 sm:space-y-8">
+        <section className="space-y-3">
+          <h1 className="text-2xl sm:text-3xl font-semibold">
+            yoo, i'm jathin pranav singaraju!
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700">
-            Student. Developer. Adventurer.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-4">
+          <p className="text-xs sm:text-sm text-gray-600">
+            builder, hooper,{" "}
             <Link
-              href="/about"
-              className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
+              href="https://sites.google.com/view/jps-art-portfolio/home"
+              className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              About Me
+              artist
             </Link>
-            <a
-              href="mailto:pran.singaraju@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
-              className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
-            >
-              Contact Me
-            </a>
-          </div>
-        </div>
-        <div className="flex gap-8 ml-2 pt-12">
-          <a
-            href="https://www.linkedin.com/in/jpsingaraju/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            <FaLinkedin size={32} />
-          </a>
-          <a
-            href="https://github.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-purple-700 transition-colors"
-          >
-            <FaGithub size={32} />
-          </a>
-          <a
-            href="https://twitter.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-black transition-colors"
-          >
-            <FaXTwitter size={32} />
-          </a>
-          <a
-            href="https://instagram.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-pink-600 transition-colors"
-          >
-            <FaInstagram size={32} />
-          </a>
-        </div>
-      </div>
-      <div className="hidden lg:flex absolute bottom-0 right-0 items-end justify-end z-10">
-        <img
-          src="main-photo.png"
-          className="w-auto h-auto"
-          style={{ width: "575px" }}
-        />
-      </div>
-      <div className="bg-gray-100 lg:hidden flex flex-col items-center justify-center w-full h-full space-y-6 p-8">
-        <img
-          src="circular-photo.png"
-          className="rounded-full w-48 h-48 object-cover"
-        />
-        <h1 className="text-4xl font-bold text-gray-800 text-center">
-          Jathin Pranav Singaraju
-        </h1>
-        <p className="text-lg text-gray-600 text-center">
-          Student. Entrepreneur. Adventurer.
-        </p>
-        <div className="flex flex-wrap gap-4 pt-4">
+            , and poker degen ;)
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
+          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
+            <li>- working on smth cool, stay tuned</li>
+            <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
+          </ul>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-xs sm:text-sm font-semibold">previously:</h2>
+          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
+            <li>- launched contests platform w/ 1k users + $10k revenue</li>
+            <li>- swe @ hp + few startups</li>
+            <li>- barry m goldwater scholar</li>
+            <li>{`— ai/ml researcher @ unt —> 3 publications + 1 patent`}</li>
+          </ul>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-xs sm:text-sm font-semibold">projects:</h2>
+          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/eyedentity"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                eye-dentity
+              </Link>{" "}
+              (calhacks - 1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/nova-your-automated-pa"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                nova ai
+              </Link>{" "}
+              (calhacks - 2nd place)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/just-hurry"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                just hurry!
+              </Link>{" "}
+              (hackharvard)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://x.com/jp_singaraju/status/1837926719116005680"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                crime watch
+              </Link>{" "}
+              (palantir devcon)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://www.youtube.com/watch?v=3qaAxZTMLfk&t=12s"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                grade genius
+              </Link>{" "}
+              (personal)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://www.youtube.com/watch?v=KhQo-jdlRg0"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                face mask detector
+              </Link>{" "}
+              (personal)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/ecogo-w3lzc9"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ecogo
+              </Link>{" "}
+              (sdhacks - 1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/sharez"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                share.
+              </Link>{" "}
+              (pennapps)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/spaceverse-yah3tl"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                spaceverse
+              </Link>{" "}
+              (hackunt)
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-3">
+          <p className="text-gray-600 text-xs sm:text-sm">
+            please reach out, i would love to meet you!
+          </p>
+
           <Link
-            href="/about"
-            className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
+            href="mailto:pran.singaraju@gmail.com"
+            className="block text-gray-600 hover:text-gray-900 underline decoration-gray-400 hover:decoration-gray-600 transition-all text-xs sm:text-sm"
           >
-            About Me
+            pran.singaraju@gmail.com
           </Link>
-          <a
-            href="mailto:pran.singaraju@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Jathin,"
-            className="px-8 py-3 bg-slate-500 text-white text-lg rounded-3xl hover:bg-slate-700 transition-colors"
-          >
-            Contact Me
-          </a>
-        </div>
-        <div className="flex gap-6 pt-6">
-          <a
-            href="https://www.linkedin.com/in/jpsingaraju/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            <FaLinkedin size={32} />
-          </a>
-          <a
-            href="https://github.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-purple-700 transition-colors"
-          >
-            <FaGithub size={32} />
-          </a>
-          <a
-            href="https://twitter.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-black transition-colors"
-          >
-            <FaXTwitter size={32} />
-          </a>
-          <a
-            href="https://instagram.com/jpsingaraju"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-pink-600 transition-colors"
-          >
-            <FaInstagram size={32} />
-          </a>
-        </div>
-      </div>
+
+          <div className="flex gap-3 sm:gap-4 text-sm sm:text-base pt-2">
+            <Link
+              href="https://twitter.com/jpsingaraju"
+              className="text-gray-600 hover:text-gray-800 transform hover:scale-105 transition-all duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter size={20} sm={24} />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/jpsingaraju"
+              className="text-gray-600 hover:text-blue-600 transform hover:scale-105 transition-all duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={20} sm={24} />
+            </Link>
+            <Link
+              href="https://github.com/jpsingaraju"
+              className="text-gray-600 hover:text-purple-700 transform hover:scale-105 transition-all duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={20} sm={24} />
+            </Link>
+            <Link
+              href="https://instagram.com/jpsingaraju"
+              className="text-gray-600 hover:text-pink-600 transform hover:scale-105 transition-all duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram size={20} sm={24} />
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
