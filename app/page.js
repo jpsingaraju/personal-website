@@ -164,10 +164,10 @@ export default function Home() {
           </p>
 
           <Link
-            href="mailto:pran.singaraju@gmail.com"
+            href="mailto:jathinpsingaraju@berkeley.edu"
             className="block text-gray-600 hover:text-gray-900 underline decoration-gray-400 hover:decoration-gray-600 transition-all text-xs sm:text-sm"
           >
-            pran.singaraju@gmail.com
+            jathinpsingaraju@berkeley.edu
           </Link>
 
           <div className="flex gap-3 sm:gap-4 text-sm sm:text-base pt-2">
