@@ -40,7 +40,39 @@ export default function Home() {
             <li>- launched contests platform w/ 1k users + $10k revenue</li>
             <li>- swe @ hp + few startups</li>
             <li>- barry m goldwater scholar</li>
-            <li>{`— ai/ml researcher @ unt —> 3 publications + 1 patent`}</li>
+            <li>
+              — ai/ml researcher @ unt —&gt; patent + publications
+              <span className="text-xs align-super">
+                [
+                <Link
+                  href="https://www.liebertpub.com/doi/10.1089/ten.TEC.2023.0150"
+                  className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  1
+                </Link>
+                ,
+                <Link
+                  href="https://aclanthology.org/2022.naacl-main.345/"
+                  className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  2
+                </Link>
+                ,
+                <Link
+                  href="https://aiche.onlinelibrary.wiley.com/doi/10.1002/btm2.10641"
+                  className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  3
+                </Link>
+                ]
+              </span>
+            </li>
           </ul>
         </section>
 
@@ -159,9 +191,9 @@ export default function Home() {
         </section>
 
         <section className="space-y-3">
-          <p className="text-gray-600 text-xs sm:text-sm">
+          {/* <p className="text-gray-600 text-xs sm:text-sm">
             please reach out, i would love to meet you!
-          </p>
+          </p> */}
 
           <Link
             href="mailto:jathinpsingaraju@berkeley.edu"
