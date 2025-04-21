@@ -41,7 +41,7 @@ export default function Home() {
             <li>- swe @ hp + few startups</li>
             <li>- barry m goldwater scholar</li>
             <li>
-              — ai/ml researcher @ unt —&gt; patent + publications
+              — ai/ml researcher —&gt; publications
               <span className="text-xs align-super">
                 [
                 <Link
@@ -71,7 +71,8 @@ export default function Home() {
                   3
                 </Link>
                 ]
-              </span>
+              </span>{" "}
+              + patent
             </li>
           </ul>
         </section>
@@ -139,7 +140,7 @@ export default function Home() {
               </Link>{" "}
               (personal)
             </li>
-            <li>
+            {/* <li>
               -{" "}
               <Link
                 href="https://www.youtube.com/watch?v=KhQo-jdlRg0"
@@ -186,9 +187,39 @@ export default function Home() {
                 spaceverse
               </Link>{" "}
               (hackunt)
-            </li>
+            </li> */}
           </ul>
         </section>
+
+        {/* <section className="space-y-2">
+          <h2 className="text-xs sm:text-sm font-semibold">other:</h2>
+          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/eyedentity"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                eye-dentity
+              </Link>{" "}
+              (calhacks - 1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/nova-your-automated-pa"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                nova ai
+              </Link>{" "}
+              (calhacks - 2nd place)
+            </li>
+          </ul>
+        </section> */}
 
         <section className="space-y-3">
           {/* <p className="text-gray-600 text-xs sm:text-sm">
