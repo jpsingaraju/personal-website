@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 font-mono">
       <main className="max-w-2xl w-full space-y-6 sm:space-y-8">
         <section className="space-y-3">
-          <div className="text-lg sm:text-xl font-semibold mb-4">
+          <div className="text-lg sm:text-xl font-bold">
             yoo, i'm jathin pranav singaraju!
           </div>
           <p className="text-xs sm:text-sm text-gray-600">
@@ -37,7 +37,6 @@ export default function Home() {
         <section className="space-y-2">
           <h2 className="text-xs sm:text-sm font-semibold">previously:</h2>
           <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
-            <li>- launched platform w/ 1k users + $10k revenue</li>
             <li>- swe @ hp + few startups</li>
             <li>- barry m goldwater scholar</li>
             <li>
@@ -83,6 +82,18 @@ export default function Home() {
             <li>
               -{" "}
               <Link
+                href="https://devpost.com/software/posthuman"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                posthuman
+              </Link>{" "}
+              (treehacks)
+            </li>
+            <li>
+              -{" "}
+              <Link
                 href="https://devpost.com/software/eyedentity"
                 className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
                 target="_blank"
@@ -92,7 +103,7 @@ export default function Home() {
               </Link>{" "}
               (calhacks - 1st place)
             </li>
-            <li>
+            {/* <li>
               -{" "}
               <Link
                 href="https://devpost.com/software/nova-your-automated-pa"
@@ -103,7 +114,7 @@ export default function Home() {
                 nova ai
               </Link>{" "}
               (calhacks - 2nd place)
-            </li>
+            </li> */}
             <li>
               -{" "}
               <Link
@@ -128,7 +139,7 @@ export default function Home() {
               </Link>{" "}
               (palantir devcon)
             </li>
-            <li>
+            {/* <li>
               -{" "}
               <Link
                 href="https://www.youtube.com/watch?v=3qaAxZTMLfk&t=12s"
@@ -140,7 +151,7 @@ export default function Home() {
               </Link>{" "}
               (personal)
             </li>
-            {/* <li>
+            <li>
               -{" "}
               <Link
                 href="https://www.youtube.com/watch?v=KhQo-jdlRg0"
