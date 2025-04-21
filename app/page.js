@@ -9,9 +9,9 @@ export default function Home() {
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 font-mono">
       <main className="max-w-2xl w-full space-y-6 sm:space-y-8">
         <section className="space-y-3">
-          <h1 className="text-2xl sm:text-3xl font-semibold">
+          <div className="text-lg sm:text-xl font-semibold mb-4">
             yoo, i'm jathin pranav singaraju!
-          </h1>
+          </div>
           <p className="text-xs sm:text-sm text-gray-600">
             builder, hooper,{" "}
             <Link
@@ -37,7 +37,7 @@ export default function Home() {
         <section className="space-y-2">
           <h2 className="text-xs sm:text-sm font-semibold">previously:</h2>
           <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
-            <li>- launched contests platform w/ 1k users + $10k revenue</li>
+            <li>- launched platform w/ 1k users + $10k revenue</li>
             <li>- swe @ hp + few startups</li>
             <li>- barry m goldwater scholar</li>
             <li>
