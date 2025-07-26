@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="h-screen flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
+    <div className="min-h-screen max-h-screen flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
       <main className="max-w-2xl w-full space-y-8 sm:space-y-8">
         <section className="space-y-2">
           <div className="text-lg sm:text-xl font-bold">
