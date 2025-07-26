@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/circular-photo.png" />
         <title>Jathin Pranav Singaraju</title>
       </head>
-      <body className="h-full w-full bg-off-white">{children}</body>
+      <body className="h-full w-full bg-white">{children}</body>
     </html>
   );
 }

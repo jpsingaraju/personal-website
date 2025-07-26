@@ -6,11 +6,11 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 font-mono">
-      <main className="max-w-2xl w-full space-y-6 sm:space-y-8">
-        <section className="space-y-3">
+    <div className="h-screen flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
+      <main className="max-w-2xl w-full space-y-8 sm:space-y-8">
+        <section className="space-y-2">
           <div className="text-lg sm:text-xl font-bold">
-            yoo, i'm jathin pranav singaraju!
+            jathin pranav singaraju
           </div>
           <p className="text-xs sm:text-sm text-gray-600">
             builder, hooper,{" "}
@@ -26,10 +26,10 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-2">
+        <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
-          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
-            <li>- working on smth cool, stay tuned</li>
+          <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
+            <li>- working on cool stuff</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
           </ul>
         </section>
@@ -76,9 +76,9 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="space-y-2">
+        <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">projects:</h2>
-          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
+          <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>
               -{" "}
               <Link
@@ -103,18 +103,6 @@ export default function Home() {
               </Link>{" "}
               (calhacks - 1st place)
             </li>
-            {/* <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/nova-your-automated-pa"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                nova ai
-              </Link>{" "}
-              (calhacks - 2nd place)
-            </li> */}
             <li>
               -{" "}
               <Link
@@ -139,104 +127,10 @@ export default function Home() {
               </Link>{" "}
               (palantir devcon)
             </li>
-            {/* <li>
-              -{" "}
-              <Link
-                href="https://www.youtube.com/watch?v=3qaAxZTMLfk&t=12s"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                grade genius
-              </Link>{" "}
-              (personal)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://www.youtube.com/watch?v=KhQo-jdlRg0"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                face mask detector
-              </Link>{" "}
-              (personal)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/ecogo-w3lzc9"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ecogo
-              </Link>{" "}
-              (sdhacks - 1st place)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/sharez"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                share.
-              </Link>{" "}
-              (pennapps)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/spaceverse-yah3tl"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                spaceverse
-              </Link>{" "}
-              (hackunt)
-            </li> */}
           </ul>
         </section>
 
-        {/* <section className="space-y-2">
-          <h2 className="text-xs sm:text-sm font-semibold">other:</h2>
-          <ul className="space-y-1 text-gray-600 text-xs sm:text-sm">
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/eyedentity"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                eye-dentity
-              </Link>{" "}
-              (calhacks - 1st place)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/nova-your-automated-pa"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                nova ai
-              </Link>{" "}
-              (calhacks - 2nd place)
-            </li>
-          </ul>
-        </section> */}
-
-        <section className="space-y-3">
-          {/* <p className="text-gray-600 text-xs sm:text-sm">
-            please reach out, i would love to meet you!
-          </p> */}
-
+        <section className="space-y-2">
           <Link
             href="mailto:jathinpsingaraju@berkeley.edu"
             className="block text-gray-600 hover:text-gray-900 underline decoration-gray-400 hover:decoration-gray-600 transition-all text-xs sm:text-sm"
@@ -251,7 +145,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaXTwitter size={20} sm={24} />
+              <FaXTwitter size={18} />
             </Link>
             <Link
               href="https://linkedin.com/in/jpsingaraju"
@@ -259,7 +153,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={20} sm={24} />
+              <FaLinkedin size={18} />
             </Link>
             <Link
               href="https://github.com/jpsingaraju"
@@ -267,7 +161,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub size={20} sm={24} />
+              <FaGithub size={18} />
             </Link>
             <Link
               href="https://instagram.com/jpsingaraju"
@@ -275,7 +169,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size={20} sm={24} />
+              <FaInstagram size={18} />
             </Link>
           </div>
         </section>
