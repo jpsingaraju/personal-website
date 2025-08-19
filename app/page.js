@@ -29,7 +29,7 @@ export default function Home() {
         <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
-            <li>- working on cool stuff</li>
+            <li>- building smth cool</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
           </ul>
         </section>
