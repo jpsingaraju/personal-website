@@ -71,7 +71,15 @@ export default function Home() {
                 </Link>
                 ]
               </span>{" "}
-              + patent
+              +{" "}
+              <Link
+                href="https://patents.google.com/patent/US20250029359A1"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                patent
+              </Link>
             </li>
           </ul>
         </section>
