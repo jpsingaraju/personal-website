@@ -29,7 +29,7 @@ export default function Home() {
         <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
-            <li>- building smth cool</li>
+            <li>- building cool stuff</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
           </ul>
         </section>
@@ -90,14 +90,13 @@ export default function Home() {
             <li>
               -{" "}
               <Link
-                href="https://devpost.com/software/posthuman"
+                href="https://derivium.co"
                 className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                posthuman
+                derivium
               </Link>{" "}
-              (treehacks)
             </li>
             <li>
               -{" "}
@@ -109,7 +108,19 @@ export default function Home() {
               >
                 eye-dentity
               </Link>{" "}
-              (calhacks - 1st place)
+              -&gt; calhacks (1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://devpost.com/software/posthuman"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                posthuman
+              </Link>{" "}
+              -&gt; treehacks
             </li>
             <li>
               -{" "}
@@ -121,19 +132,7 @@ export default function Home() {
               >
                 just hurry!
               </Link>{" "}
-              (hackharvard)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://x.com/jp_singaraju/status/1837926719116005680"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                crime watch
-              </Link>{" "}
-              (palantir devcon)
+              -&gt; hackharvard
             </li>
           </ul>
         </section>
@@ -141,7 +140,7 @@ export default function Home() {
         <section className="space-y-2">
           <Link
             href="mailto:jathinpsingaraju@berkeley.edu"
-            className="block text-gray-600 hover:text-gray-900 underline decoration-gray-400 hover:decoration-gray-600 transition-all text-xs sm:text-sm"
+            className="w-fit block text-gray-600 hover:text-gray-900 underline decoration-gray-400 hover:decoration-gray-600 transition-all text-xs sm:text-sm"
           >
             jathinpsingaraju@berkeley.edu
           </Link>
