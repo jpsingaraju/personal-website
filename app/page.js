@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { SiDevpost } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -169,6 +170,14 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <FaGithub size={18} />
+            </Link>
+            <Link
+              href="https://devpost.com/jpsingaraju"
+              className="text-gray-600 hover:text-indigo-700 transform hover:scale-105 transition-all duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiDevpost size={18} />
             </Link>
             <Link
               href="https://instagram.com/jpsingaraju"
