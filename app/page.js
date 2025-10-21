@@ -30,7 +30,7 @@ export default function Home() {
         <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
-            <li>- building cool stuff</li>
+            <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
           </ul>
         </section>
@@ -98,6 +98,19 @@ export default function Home() {
               >
                 derivium
               </Link>{" "}
+              -&gt; options discovery engine
+            </li>
+            <li>
+              -{" "}
+              <Link
+                href="https://x.com/jpsingaraju/status/1977155001064825136"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                polyhedg
+              </Link>{" "}
+              -&gt; sftw x a16z hacks (2nd place)
             </li>
             <li>
               -{" "}
