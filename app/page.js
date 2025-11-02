@@ -32,6 +32,7 @@ export default function Home() {
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
+            <li>- incoming @ ▲ (summer 2026)</li>
           </ul>
         </section>
 
@@ -86,7 +87,7 @@ export default function Home() {
         </section>
 
         <section className="space-y-1">
-          <h2 className="text-xs sm:text-sm font-semibold">projects:</h2>
+          <h2 className="text-xs sm:text-sm font-semibold">some projects:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>
               -{" "}
@@ -103,6 +104,18 @@ export default function Home() {
             <li>
               -{" "}
               <Link
+                href="https://x.com/jpsingaraju/status/1982939253463290265"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                harmoniq
+              </Link>{" "}
+              -&gt; calhacks (1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
                 href="https://x.com/jpsingaraju/status/1977155001064825136"
                 className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
                 target="_blank"
@@ -112,18 +125,18 @@ export default function Home() {
               </Link>{" "}
               -&gt; sftw x a16z hacks (2nd place)
             </li>
-            <li>
+            {/* <li>
               -{" "}
               <Link
-                href="https://devpost.com/software/eyedentity"
+                href="https://kinetikgigs.com"
                 className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                eye-dentity
+                kinetik
               </Link>{" "}
-              -&gt; calhacks (1st place)
-            </li>
+              -&gt; intel layer for recruiting
+            </li> */}
             <li>
               -{" "}
               <Link
@@ -135,18 +148,6 @@ export default function Home() {
                 posthuman
               </Link>{" "}
               -&gt; treehacks
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/just-hurry"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                just hurry!
-              </Link>{" "}
-              -&gt; hackharvard
             </li>
           </ul>
         </section>
