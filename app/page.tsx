@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiDevpost } from "react-icons/si";
 
 export default function Home(): JSX.Element {
+  const [showVercel, setShowVercel] = useState(false);
+
   return (
     <div className="h-dvh flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
       <main className="max-w-2xl w-full space-y-8 sm:space-y-8">
@@ -32,7 +35,35 @@ export default function Home(): JSX.Element {
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
-            <li>- incoming @ ▲ (summer 2026)</li>
+            <li>
+              - incoming @{" "}
+              <span
+                className="relative inline-block cursor-pointer"
+                onMouseEnter={() => setShowVercel(true)}
+                onMouseLeave={() => setShowVercel(false)}
+                onClick={() => setShowVercel(!showVercel)}
+              >
+                <span
+                  className={`inline-block align-bottom transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
+                    showVercel
+                      ? "opacity-0 max-w-0"
+                      : "opacity-100 max-w-[1ch] mr-2"
+                  }`}
+                >
+                  ▲
+                </span>
+                <span
+                  className={`text-gray-600 inline-block align-bottom transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
+                    showVercel
+                      ? "opacity-100 max-w-[6ch] mr-2"
+                      : "opacity-0 max-w-0"
+                  }`}
+                >
+                  vercel
+                </span>
+              </span>
+              (summer 2026)
+            </li>
           </ul>
         </section>
 
@@ -207,4 +238,3 @@ export default function Home(): JSX.Element {
     </div>
   );
 }
-
