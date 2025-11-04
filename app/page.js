@@ -32,7 +32,8 @@ export default function Home() {
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
-            <li>- incoming @ ▲ (summer 2026)</li>
+            {/* <li>- incoming @ ▲ (summer 2026)</li> */}
+            <li>- incoming @ vercel(summer 2026)</li>
           </ul>
         </section>
 
