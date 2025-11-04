@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiDevpost } from "react-icons/si";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div className="h-dvh flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
       <main className="max-w-2xl w-full space-y-8 sm:space-y-8">
@@ -32,8 +32,7 @@ export default function Home() {
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
-            {/* <li>- incoming @ ▲ (summer 2026)</li> */}
-            <li>- incoming @ vercel(summer 2026)</li>
+            <li>- incoming @ ▲ (summer 2026)</li>
           </ul>
         </section>
 
@@ -208,3 +207,4 @@ export default function Home() {
     </div>
   );
 }
+
