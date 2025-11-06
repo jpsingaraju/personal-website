@@ -7,8 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiDevpost } from "react-icons/si";
 
 export default function Home(): JSX.Element {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [showVercel, setShowVercel] = useState(false);
 
   return (
     <div className="h-dvh flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
@@ -40,13 +39,13 @@ export default function Home(): JSX.Element {
               - incoming @{" "}
               <span
                 className="relative inline-block cursor-pointer"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                onClick={() => setIsExpanded(!isExpanded)}
+                onMouseEnter={() => setShowVercel(true)}
+                onMouseLeave={() => setShowVercel(false)}
+                onClick={() => setShowVercel(!showVercel)}
               >
                 <span
                   className={`inline-block align-bottom transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
-                    isExpanded || isHovered
+                    showVercel
                       ? "opacity-0 max-w-0"
                       : "opacity-100 max-w-[1ch] mr-2"
                   }`}
@@ -55,7 +54,7 @@ export default function Home(): JSX.Element {
                 </span>
                 <span
                   className={`text-gray-600 inline-block align-bottom transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
-                    isExpanded || isHovered
+                    showVercel
                       ? "opacity-100 max-w-[6ch] mr-2"
                       : "opacity-0 max-w-0"
                   }`}
