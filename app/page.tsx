@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
             <li>- building cool stuff + investing</li>
             <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
             <li>
-              - incoming @{" "}
+              - incoming intern @{" "}
               <span
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setShowVercel(true)}
