@@ -19,10 +19,8 @@ export default function Home(): JSX.Element {
           <p className="text-xs sm:text-sm text-gray-600">
             builder, hooper,{" "}
             <Link
-              href="https://sites.google.com/view/jps-art-portfolio/home"
+              href="/art"
               className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               artist
             </Link>
