@@ -300,7 +300,7 @@ export default function ArtPortfolio() {
       <footer>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
           <p className="text-xs text-gray-500 text-center">
-            © 2026 Jathin Pranav Singaraju • All Rights Reserved
+            © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights Reserved
           </p>
         </div>
       </footer>
