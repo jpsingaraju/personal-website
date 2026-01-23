@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 interface Artwork {
@@ -59,15 +59,14 @@ const artworks: Artwork[] = [
     category: "acrylics",
   },
   {
-    title: "Sunset at the Beach",
-    medium: "Acrylic",
-    year: "2019",
+    title: "The Blue Morpho Butterfly",
+    medium: "Colored Pencil",
+    year: "2020",
     description: [
-      "Captures the feel of watching the sunset on the beach.",
+      "Symbolizes transformation and delicate beauty in nature.",
     ],
-    image: "/art/sunset-at-beach.jpg",
-    category: "acrylics",
-    maxHeight: "max-h-[400px]",
+    image: "/art/blue-morpho-butterfly.jpg",
+    category: "pencils",
   },
   {
     title: "Future Vision",
@@ -131,14 +130,15 @@ const artworks: Artwork[] = [
     category: "pencils",
   },
   {
-    title: "The Blue Morpho Butterfly",
-    medium: "Colored Pencil",
-    year: "2020",
+    title: "Sunset at the Beach",
+    medium: "Acrylic",
+    year: "2019",
     description: [
-      "Symbolizes transformation and delicate beauty in nature.",
+      "Captures the feel of watching the sunset on the beach.",
     ],
-    image: "/art/blue-morpho-butterfly.jpg",
-    category: "pencils",
+    image: "/art/sunset-at-beach.jpg",
+    category: "acrylics",
+    maxHeight: "max-h-[400px]",
   },
   {
     title: "Self Portrait",
@@ -154,12 +154,35 @@ const artworks: Artwork[] = [
 
 export default function ArtPortfolio() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const artworkRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleArtworkClick = (index: number) => {
+    if (window.innerWidth >= 768) {
+      setSelectedIndex(index);
+    }
+  };
+
+  const handleClose = () => {
+    const previousIndex = selectedIndex;
+    setSelectedIndex(null);
+    
+    // Scroll to the artwork position after state updates
+    setTimeout(() => {
+      if (previousIndex !== null && artworkRefs.current[previousIndex]) {
+        artworkRefs.current[previousIndex]?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-white font-mono">
       {/* Header */}
       <header>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
           <div className="flex justify-between items-start mt-4">
             <h1 className="text-lg sm:text-xl font-bold">
               my art portfolio
@@ -175,7 +198,7 @@ export default function ArtPortfolio() {
       </header>
 
       {/* About Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <div className="max-w-lg space-y-4 text-xs sm:text-sm text-gray-700">
           <p>
             Welcome! This website showcases hallmark pieces that represent significant milestones in my journey as an artist. All pieces originate from my imagination or reference photos I've personally taken. With every new work, I challenge myself by exploring different mediums and techniques, always seeking to expand my skills and knowledge.
@@ -187,50 +210,95 @@ export default function ArtPortfolio() {
       </div>
 
       {/* Masonry Gallery - Balanced Layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-6">
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {artworks.map((artwork, index) => (
-            <div
-              key={index}
-              className="break-inside-avoid group"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className="relative bg-gray-100 overflow-hidden rounded-lg">
-                <Image
-                  src={artwork.image}
-                  alt={artwork.title}
-                  width={800}
-                  height={800}
-                  className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ''}`}
-                />
-                {/* Overlay on hover */}
-                <div
-                  className={`absolute inset-0 bg-black/75 transition-opacity duration-300 ${
-                    hoveredIndex === index ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
-                    <h3 className="text-sm font-semibold mb-1">
-                      {artwork.title}
-                    </h3>
-                    <p className="text-xs opacity-90">
-                      {artwork.medium} • {artwork.year}
-                    </p>
-                    <p className="text-xs mt-2 opacity-75">
-                      {artwork.description[0]}
-                    </p>
+      {selectedIndex === null && (
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 pb-6">
+          <div className="columns-1 md:columns-2 gap-6 space-y-6">
+            {artworks.map((artwork, index) => (
+              <div
+                key={index}
+                ref={(el) => { artworkRefs.current[index] = el; }}
+                className="break-inside-avoid group md:cursor-pointer"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => handleArtworkClick(index)}
+              >
+                <div className="relative bg-gray-100 overflow-hidden rounded-lg">
+                  <Image
+                    src={artwork.image}
+                    alt={artwork.title}
+                    width={800}
+                    height={800}
+                    className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ''}`}
+                  />
+                  {/* Overlay on hover */}
+                  <div
+                    className={`absolute inset-0 bg-black/75 transition-opacity duration-300 ${
+                      hoveredIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
+                      <h3 className="text-sm font-semibold mb-1">
+                        {artwork.title}
+                      </h3>
+                      <p className="text-xs opacity-90">
+                        {artwork.medium} • {artwork.year}
+                      </p>
+                      <p className="text-xs mt-2 opacity-75">
+                        {artwork.description[0]}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Selected Artwork Detail View */}
+      {selectedIndex !== null && (
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 pb-6">
+          <div className="space-y-6">
+            {/* Image */}
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <Image
+                src={artworks[selectedIndex].image}
+                alt={artworks[selectedIndex].title}
+                width={1200}
+                height={1200}
+                className="w-full h-auto"
+              />
+            </div>
+            
+            {/* Details */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-start">
+                <h2 className="text-lg sm:text-xl font-bold">
+                  {artworks[selectedIndex].title}
+                </h2>
+                <button
+                  onClick={handleClose}
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm underline"
+                >
+                  close
+                </button>
+              </div>
+              <p className="text-sm text-gray-600">
+                {artworks[selectedIndex].medium} • {artworks[selectedIndex].year}
+              </p>
+              <div className="text-xs sm:text-sm text-gray-700 space-y-1">
+                {artworks[selectedIndex].description.map((desc, i) => (
+                  <p key={i}>{desc}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
           <p className="text-xs text-gray-500 text-center">
             © 2026 Jathin Pranav Singaraju • All Rights Reserved
           </p>
