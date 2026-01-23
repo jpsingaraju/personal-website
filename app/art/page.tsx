@@ -199,9 +199,9 @@ export default function ArtPortfolio() {
 
       {/* About Section */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
-        <div className="max-w-lg space-y-4 text-xs sm:text-sm text-gray-700">
+        <div className="space-y-4 text-xs sm:text-sm text-gray-700">
           <p>
-            Welcome! This website showcases hallmark pieces that represent significant milestones in my journey as an artist. All pieces originate from my imagination or reference photos I've personally taken. With every new work, I challenge myself by exploring different mediums and techniques, always seeking to expand my skills and knowledge.
+            Welcome! This website showcases hallmark pieces that represent milestones in my journey as an artist. All pieces originate from my imagination or reference photos I've personally taken. With every new work, I challenge myself by exploring different mediums and techniques, always seeking to expand my skills and knowledge.
           </p>
           <p className="text-xs text-gray-500 italic pt-1">
             A sincere thank you the two art teachers that developed me as an artist: Ms. Rosie and Mr. Buscemi!
