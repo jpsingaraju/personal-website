@@ -20,9 +20,7 @@ const artworks: Artwork[] = [
     title: "Orange on Orange",
     medium: "Acrylic",
     year: "2013",
-    description: [
-      "This was my first painting.",
-    ],
+    description: ["This was my first painting."],
     image: "/art/orange-on-orange-v2.jpg",
     category: "acrylics",
     maxHeight: "max-h-[480px]",
@@ -42,9 +40,7 @@ const artworks: Artwork[] = [
     title: "An Innocent Smile",
     medium: "Pastel Pencils",
     year: "2020",
-    description: [
-      "Radiates joy and light within the hearts of humanity.",
-    ],
+    description: ["Radiates joy and light within the hearts of humanity."],
     image: "/art/innocent-smile.jpg",
     category: "pastels",
   },
@@ -52,9 +48,7 @@ const artworks: Artwork[] = [
     title: "Patriotic Red Cardinal",
     medium: "Acrylic",
     year: "2014",
-    description: [
-      "Represents the nation living in peace and harmony.",
-    ],
+    description: ["Represents the nation living in peace and harmony."],
     image: "/art/patriotic-red-cardinal.jpg",
     category: "acrylics",
   },
@@ -62,9 +56,7 @@ const artworks: Artwork[] = [
     title: "The Blue Morpho Butterfly",
     medium: "Colored Pencil",
     year: "2020",
-    description: [
-      "Symbolizes transformation and delicate beauty in nature.",
-    ],
+    description: ["Symbolizes transformation and delicate beauty in nature."],
     image: "/art/blue-morpho-butterfly.jpg",
     category: "pencils",
   },
@@ -82,9 +74,7 @@ const artworks: Artwork[] = [
     title: "The Beauty of Red",
     medium: "Oil Pastels",
     year: "2015",
-    description: [
-      "Displays blending colors and getting messy.",
-    ],
+    description: ["Displays blending colors and getting messy."],
     image: "/art/beauty-of-red.jpg",
     category: "pastels",
   },
@@ -92,9 +82,7 @@ const artworks: Artwork[] = [
     title: "My Mom - The Light of The House",
     medium: "Charcoal",
     year: "2021",
-    description: [
-      "Depicts my mom's incredible strength and warmth.",
-    ],
+    description: ["Depicts my mom's incredible strength and warmth."],
     image: "/art/light-of-the-house.jpg",
     category: "pencils",
   },
@@ -133,9 +121,7 @@ const artworks: Artwork[] = [
     title: "Sunset at the Beach",
     medium: "Acrylic",
     year: "2019",
-    description: [
-      "Captures the feel of watching the sunset on the beach.",
-    ],
+    description: ["Captures the feel of watching the sunset on the beach."],
     image: "/art/sunset-at-beach.jpg",
     category: "acrylics",
     maxHeight: "max-h-[400px]",
@@ -144,9 +130,7 @@ const artworks: Artwork[] = [
     title: "Self Portrait",
     medium: "Writing Pencil",
     year: "2019",
-    description: [
-      "Reminds me of how much I've grown as an artist and person.",
-    ],
+    description: ["Reminds me of how much I've grown as an artist and person."],
     image: "/art/myself-6th-grade.jpg",
     category: "pencils",
   },
@@ -160,19 +144,22 @@ export default function ArtPortfolio() {
   const handleArtworkClick = (index: number) => {
     if (window.innerWidth >= 768) {
       setSelectedIndex(index);
+    } else {
+      // On mobile, toggle the hover overlay
+      setHoveredIndex(hoveredIndex === index ? null : index);
     }
   };
 
   const handleClose = () => {
     const previousIndex = selectedIndex;
     setSelectedIndex(null);
-    
+
     // Scroll to the artwork position after state updates
     setTimeout(() => {
       if (previousIndex !== null && artworkRefs.current[previousIndex]) {
-        artworkRefs.current[previousIndex]?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'center' 
+        artworkRefs.current[previousIndex]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
         });
       }
     }, 100);
@@ -184,9 +171,7 @@ export default function ArtPortfolio() {
       <header>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
           <div className="flex justify-between items-start mt-4">
-            <h1 className="text-lg sm:text-xl font-bold">
-              my art portfolio
-            </h1>
+            <h1 className="text-lg sm:text-xl font-bold">my art portfolio</h1>
             <Link
               href="/"
               className="underline text-gray-600 hover:text-gray-900 transition-colors text-sm"
@@ -201,10 +186,15 @@ export default function ArtPortfolio() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
           <p>
-            Welcome! This website showcases hallmark pieces that represent milestones in my journey as an artist. All pieces originate from my imagination or reference photos I've personally taken. With every new work, I challenge myself by exploring different mediums and techniques, always seeking to expand my skills and knowledge.
+            Welcome! This website showcases hallmark pieces that represent
+            milestones in my journey as an artist. All pieces originate from my
+            imagination or reference photos I've personally taken. With every
+            new work, I challenge myself by exploring different mediums and
+            techniques, always seeking to expand my skills and knowledge.
           </p>
           <p className="text-xs text-gray-500 italic pt-1">
-            A sincere thank you the two art teachers that developed me as an artist: Ms. Rosie and Mr. Buscemi!
+            A sincere thank you the two art teachers that developed me as an
+            artist: Ms. Rosie and Mr. Buscemi!
           </p>
         </div>
       </div>
@@ -216,10 +206,20 @@ export default function ArtPortfolio() {
             {artworks.map((artwork, index) => (
               <div
                 key={index}
-                ref={(el) => { artworkRefs.current[index] = el; }}
-                className="break-inside-avoid group md:cursor-pointer"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                ref={(el) => {
+                  artworkRefs.current[index] = el;
+                }}
+                className="break-inside-avoid group cursor-pointer"
+                onMouseEnter={() => {
+                  if (window.innerWidth >= 768) {
+                    setHoveredIndex(index);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (window.innerWidth >= 768) {
+                    setHoveredIndex(null);
+                  }
+                }}
                 onClick={() => handleArtworkClick(index)}
               >
                 <div className="relative bg-gray-100 overflow-hidden rounded-lg">
@@ -228,7 +228,7 @@ export default function ArtPortfolio() {
                     alt={artwork.title}
                     width={800}
                     height={800}
-                    className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ''}`}
+                    className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ""}`}
                   />
                   {/* Overlay on hover */}
                   <div
@@ -269,7 +269,7 @@ export default function ArtPortfolio() {
                 className="w-full h-auto"
               />
             </div>
-            
+
             {/* Details */}
             <div className="space-y-2">
               <div className="flex justify-between items-start">
@@ -284,7 +284,8 @@ export default function ArtPortfolio() {
                 </button>
               </div>
               <p className="text-sm text-gray-600">
-                {artworks[selectedIndex].medium} • {artworks[selectedIndex].year}
+                {artworks[selectedIndex].medium} •{" "}
+                {artworks[selectedIndex].year}
               </p>
               <div className="text-xs sm:text-sm text-gray-700 space-y-1">
                 {artworks[selectedIndex].description.map((desc, i) => (
@@ -300,7 +301,8 @@ export default function ArtPortfolio() {
       <footer>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
           <p className="text-xs text-gray-500 text-center">
-            © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights Reserved
+            © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights
+            Reserved
           </p>
         </div>
       </footer>
