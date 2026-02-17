@@ -145,6 +145,18 @@ export default function Home(): JSX.Element {
             <li>
               -{" "}
               <Link
+                href="https://devpost.com/software/bye-buy"
+                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                bye! buy!
+              </Link>{" "}
+              -&gt; treehacks (1st place)
+            </li>
+            <li>
+              -{" "}
+              <Link
                 href="https://x.com/jpsingaraju/status/1977155001064825136"
                 className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
                 target="_blank"
@@ -165,7 +177,7 @@ export default function Home(): JSX.Element {
                 kinetik
               </Link>{" "}
               -&gt; intel layer for recruiting
-            </li> */}
+            </li>
             <li>
               -{" "}
               <Link
@@ -177,7 +189,7 @@ export default function Home(): JSX.Element {
                 posthuman
               </Link>{" "}
               -&gt; treehacks
-            </li>
+            </li> */}
           </ul>
         </section>
 
