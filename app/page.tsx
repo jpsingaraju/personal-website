@@ -18,10 +18,7 @@ export default function Home(): JSX.Element {
           </div>
           <p className="text-xs sm:text-sm text-gray-600">
             builder, hooper,{" "}
-            <Link
-              href="/art"
-              className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-            >
+            <Link href="/art" className="hover:text-gray-900 transition-colors">
               artist
             </Link>
             , and poker degen ;)
@@ -115,82 +112,22 @@ export default function Home(): JSX.Element {
           </ul>
         </section>
 
-        <section className="space-y-1">
-          <h2 className="text-xs sm:text-sm font-semibold">some projects:</h2>
-          <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
-            <li>
-              -{" "}
-              <Link
-                href="https://derivium.co"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                derivium
-              </Link>{" "}
-              -&gt; options discovery engine
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://x.com/jpsingaraju/status/1982939253463290265"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                harmoniq
-              </Link>{" "}
-              -&gt; calhacks (1st place)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/bye-buy"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                bye! buy!
-              </Link>{" "}
-              -&gt; treehacks (1st place)
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://x.com/jpsingaraju/status/1977155001064825136"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                polyhedg
-              </Link>{" "}
-              -&gt; sftw x a16z hacks (2nd place)
-            </li>
-            {/* <li>
-              -{" "}
-              <Link
-                href="https://kinetikgigs.com"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                kinetik
-              </Link>{" "}
-              -&gt; intel layer for recruiting
-            </li>
-            <li>
-              -{" "}
-              <Link
-                href="https://devpost.com/software/posthuman"
-                className="underline decoration-gray-400 hover:decoration-gray-600 transition-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                posthuman
-              </Link>{" "}
-              -&gt; treehacks
-            </li> */}
-          </ul>
+        <section className="space-y-1.5">
+          {[
+            { href: "/projects", label: "my projects" },
+            { href: "/art", label: "my artwork" },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex items-center gap-1.5 text-xs sm:text-sm font-bold text-black transition-colors w-fit"
+            >
+              {label}
+              <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          ))}
         </section>
 
         <section className="space-y-2">
@@ -226,14 +163,14 @@ export default function Home(): JSX.Element {
             >
               <FaGithub size={18} />
             </Link>
-            <Link
+            {/* <Link
               href="https://devpost.com/jpsingaraju"
               className="text-gray-600 hover:text-indigo-700 transform hover:scale-105 transition-all duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
               <SiDevpost size={18} />
-            </Link>
+            </Link> */}
             <Link
               href="https://instagram.com/jpsingaraju"
               className="text-gray-600 hover:text-pink-600 transform hover:scale-105 transition-all duration-200"

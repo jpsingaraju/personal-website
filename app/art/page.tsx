@@ -166,10 +166,11 @@ export default function ArtPortfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-mono">
+    <div className="min-h-screen bg-white font-mono flex justify-center px-4 sm:px-6">
+      <div className="max-w-2xl w-full">
       {/* Header */}
       <header>
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
+        <div className="py-6">
           <div className="flex justify-between items-start mt-4">
             <h1 className="text-lg sm:text-xl font-bold">my art portfolio</h1>
             <Link
@@ -183,25 +184,25 @@ export default function ArtPortfolio() {
       </header>
 
       {/* About Section */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+      <div>
         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
           <p>
-            Welcome! This website showcases hallmark pieces that represent
-            milestones in my journey as an artist. All pieces originate from my
-            imagination or reference photos I've personally taken. With every
-            new work, I challenge myself by exploring different mediums and
-            techniques, always seeking to expand my skills and knowledge.
+            This portfolio showcases hallmark pieces that represent milestones
+            in my journey as an artist. All pieces originate from my imagination
+            or reference photos I've personally taken. With every new work, I
+            challenge myself by exploring different mediums and techniques,
+            always seeking to expand my skills and knowledge.
           </p>
           <p className="text-xs text-gray-500 italic pt-1">
-            A sincere thank you the two art teachers that developed me as an
-            artist: Ms. Rosie and Mr. Buscemi!
+            A sincere thank you to Ms. Rosie and Mr. Buscemi for making me the
+            artist I am today!
           </p>
         </div>
       </div>
 
       {/* Masonry Gallery - Balanced Layout */}
       {selectedIndex === null && (
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 pb-6">
+        <div className="py-8 pb-6">
           <div className="columns-1 md:columns-2 gap-6 space-y-6">
             {artworks.map((artwork, index) => (
               <div
@@ -257,7 +258,7 @@ export default function ArtPortfolio() {
 
       {/* Selected Artwork Detail View */}
       {selectedIndex !== null && (
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 pb-6">
+        <div className="py-8 pb-6">
           <div className="space-y-6">
             {/* Image */}
             <div className="bg-gray-100 rounded-lg overflow-hidden">
@@ -299,13 +300,14 @@ export default function ArtPortfolio() {
 
       {/* Footer */}
       <footer>
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
+        <div className="py-6">
           <p className="text-xs text-gray-500 text-center">
             © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights
             Reserved
           </p>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
