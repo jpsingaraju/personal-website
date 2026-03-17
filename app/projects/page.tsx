@@ -3,6 +3,14 @@ import Link from "next/link";
 const log = [
   {
     date: "2026",
+    href: "https://devpost.com/software/moonshot-6wpvf7",
+    name: "moonshot",
+    desc: "generative game engine for trading",
+    tag: "babhacks 2nd",
+    external: true,
+  },
+  {
+    date: "2026",
     href: "https://april-blush.vercel.app",
     name: "april",
     desc: "your taxes, automatically filed",
@@ -65,7 +73,7 @@ const log = [
     href: "https://x.com/jpsingaraju/status/1977155001064825136",
     name: "polyhedg",
     desc: "certainty as a service",
-    tag: "a16z hacks 2nd",
+    tag: "babhacks 2nd",
     star: true,
     external: true,
   },
@@ -81,6 +89,13 @@ const log = [
     href: "https://devpost.com/software/posthuman",
     name: "posthuman",
     desc: "automated legacy management",
+    external: true,
+  },
+  {
+    date: "2025",
+    href: "https://learnify-ashen-ten.vercel.app/",
+    name: "learnify",
+    desc: "snap and solve homework helper",
     external: true,
   },
   {
@@ -140,7 +155,7 @@ const log = [
     date: "2021",
     href: "https://www.youtube.com/watch?v=3qaAxZTMLfk",
     name: "grade genius",
-    desc: "district grade app",
+    desc: "mobile grade app for students",
     star: true,
     external: true,
   },
@@ -180,8 +195,7 @@ export default function BuildLog(): JSX.Element {
             This log showcases my journey as a builder. I just love finding
             problems, building solutions, and shipping them. I have a huge list
             of ideas in my notes app that I slowly work through. Whether
-            it&apos;s a one day cook, a hackathon build, or a side quest,
-            it&apos;ll end up here.
+            it&apos;s a side quest or a hackathon build, it&apos;ll end up here.
           </p>
           <p className="text-xs text-gray-500 italic pt-1">
             I've gone through and highlighted my most memorable, favorite
@@ -221,7 +235,10 @@ export default function BuildLog(): JSX.Element {
                         <div className="text-gray-600">
                           {entry.desc}
                           {entry.tag && (
-                            <span className="text-gray-400"> · {entry.tag}</span>
+                            <span className="text-gray-400">
+                              {" "}
+                              · {entry.tag}
+                            </span>
                           )}
                         </div>
                       </div>
