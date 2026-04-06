@@ -192,7 +192,7 @@ export default function BuildLog(): JSX.Element {
 
         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
           <p>
-            This log showcases my journey as a builder. I just love finding
+            This log documents my journey as a builder. I just love finding
             problems, building solutions, and shipping them. I have a huge list
             of ideas in my notes app that I slowly work through. Whether
             it&apos;s a side quest or a hackathon build, it&apos;ll end up here.

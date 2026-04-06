@@ -140,8 +140,10 @@ export default function ArtPortfolio() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const artworkRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const selectedDetailsRef = useRef<HTMLDivElement | null>(null);
 
   const handleArtworkClick = (index: number) => {
+    setHoveredIndex(null);
     if (window.innerWidth >= 768) {
       setSelectedIndex(index);
     } else {
@@ -151,162 +153,165 @@ export default function ArtPortfolio() {
   };
 
   const handleClose = () => {
-    const previousIndex = selectedIndex;
+    setHoveredIndex(null);
     setSelectedIndex(null);
-
-    // Scroll to the artwork position after state updates
-    setTimeout(() => {
-      if (previousIndex !== null && artworkRefs.current[previousIndex]) {
-        artworkRefs.current[previousIndex]?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }
-    }, 100);
   };
+
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      // When opening an artwork, return to top.
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  }, [selectedIndex]);
 
   return (
     <div className="min-h-screen bg-white font-mono flex justify-center px-4 sm:px-6">
       <div className="max-w-2xl w-full">
-      {/* Header */}
-      <header>
-        <div className="py-6">
-          <div className="flex justify-between items-start mt-4">
-            <h1 className="text-lg sm:text-xl font-bold">my art portfolio</h1>
-            <Link
-              href="/"
-              className="underline text-gray-600 hover:text-gray-900 transition-colors text-sm"
-            >
-              back home
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      {/* About Section */}
-      <div>
-        <div className="space-y-4 text-xs sm:text-sm text-gray-700">
-          <p>
-            This portfolio showcases hallmark pieces that represent milestones
-            in my journey as an artist. All pieces originate from my imagination
-            or reference photos I've personally taken. With every new work, I
-            challenge myself by exploring different mediums and techniques,
-            always seeking to expand my skills and knowledge.
-          </p>
-          <p className="text-xs text-gray-500 italic pt-1">
-            A sincere thank you to Ms. Rosie and Mr. Buscemi for making me the
-            artist I am today!
-          </p>
-        </div>
-      </div>
-
-      {/* Masonry Gallery - Balanced Layout */}
-      {selectedIndex === null && (
-        <div className="py-8 pb-6">
-          <div className="columns-1 md:columns-2 gap-6 space-y-6">
-            {artworks.map((artwork, index) => (
-              <div
-                key={index}
-                ref={(el) => {
-                  artworkRefs.current[index] = el;
-                }}
-                className="break-inside-avoid group cursor-pointer"
-                onMouseEnter={() => {
-                  if (window.innerWidth >= 768) {
-                    setHoveredIndex(index);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (window.innerWidth >= 768) {
-                    setHoveredIndex(null);
-                  }
-                }}
-                onClick={() => handleArtworkClick(index)}
-              >
-                <div className="relative bg-gray-100 overflow-hidden rounded-lg">
-                  <Image
-                    src={artwork.image}
-                    alt={artwork.title}
-                    width={800}
-                    height={800}
-                    className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ""}`}
-                  />
-                  {/* Overlay on hover */}
-                  <div
-                    className={`absolute inset-0 bg-black/75 transition-opacity duration-300 ${
-                      hoveredIndex === index ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
-                      <h3 className="text-sm font-semibold mb-1">
-                        {artwork.title}
-                      </h3>
-                      <p className="text-xs opacity-90">
-                        {artwork.medium} • {artwork.year}
-                      </p>
-                      <p className="text-xs mt-2 opacity-75">
-                        {artwork.description[0]}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Selected Artwork Detail View */}
-      {selectedIndex !== null && (
-        <div className="py-8 pb-6">
-          <div className="space-y-6">
-            {/* Image */}
-            <div className="bg-gray-100 rounded-lg overflow-hidden">
-              <Image
-                src={artworks[selectedIndex].image}
-                alt={artworks[selectedIndex].title}
-                width={1200}
-                height={1200}
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Details */}
-            <div className="space-y-2">
-              <div className="flex justify-between items-start">
-                <h2 className="text-lg sm:text-xl font-bold">
-                  {artworks[selectedIndex].title}
-                </h2>
-                <button
-                  onClick={handleClose}
-                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm underline"
+        {/* Header */}
+        <header>
+          <div className="py-6">
+            <div className="flex justify-between items-start mt-4">
+              <h1 className="text-lg sm:text-xl font-bold">
+                {selectedIndex === null
+                  ? "my art portfolio"
+                  : artworks[selectedIndex].title.toLowerCase()}
+              </h1>
+              {selectedIndex === null ? (
+                <Link
+                  href="/"
+                  className="underline text-gray-600 hover:text-gray-900 transition-colors text-sm"
                 >
-                  close
+                  back home
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleClose}
+                  className="underline text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  back to gallery
                 </button>
-              </div>
-              <p className="text-sm text-gray-600">
-                {artworks[selectedIndex].medium} •{" "}
-                {artworks[selectedIndex].year}
+              )}
+            </div>
+          </div>
+        </header>
+
+        {/* About Section */}
+        <div ref={selectedDetailsRef} className="scroll-mt-6">
+          {selectedIndex === null ? (
+            <div className="space-y-4 text-xs sm:text-sm text-gray-700">
+              <p>
+                This portfolio showcases hallmark pieces that represent
+                milestones in my journey as an artist. All pieces originate
+                from my imagination or reference photos I've personally taken.
+                With every new work, I challenge myself by exploring different
+                mediums and techniques, always seeking to expand my skills and
+                knowledge.
               </p>
-              <div className="text-xs sm:text-sm text-gray-700 space-y-1">
+              <p className="text-xs text-gray-500 italic pt-1">
+                A sincere thank you to Ms. Rosie and Mr. Buscemi for making me
+                the artist I am today!
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-2 text-xs sm:text-sm text-gray-700">
+              <p className="text-xs text-gray-500">
+                {artworks[selectedIndex].medium} • {artworks[selectedIndex].year}
+              </p>
+              <div className="space-y-1">
                 {artworks[selectedIndex].description.map((desc, i) => (
                   <p key={i}>{desc}</p>
                 ))}
               </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
 
-      {/* Footer */}
-      <footer>
-        <div className="py-6">
-          <p className="text-xs text-gray-500 text-center">
-            © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights
-            Reserved
-          </p>
-        </div>
-      </footer>
+        {/* Masonry Gallery - Balanced Layout */}
+        {selectedIndex === null && (
+          <div className="py-8 pb-6">
+            <div className="columns-1 md:columns-2 gap-6 space-y-6">
+              {artworks.map((artwork, index) => (
+                <div
+                  key={index}
+                  ref={(el) => {
+                    artworkRefs.current[index] = el;
+                  }}
+                  className="break-inside-avoid group cursor-pointer"
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 768) {
+                      setHoveredIndex(index);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth >= 768) {
+                      setHoveredIndex(null);
+                    }
+                  }}
+                  onClick={() => handleArtworkClick(index)}
+                >
+                  <div className="relative bg-gray-100 overflow-hidden rounded-lg">
+                    <Image
+                      src={artwork.image}
+                      alt={artwork.title}
+                      width={800}
+                      height={800}
+                      className={`w-full h-auto transition-all duration-300 object-cover ${artwork.maxHeight || ""}`}
+                    />
+                    {/* Overlay on hover */}
+                    <div
+                      className={`absolute inset-0 bg-black/75 transition-opacity duration-300 ${
+                        hoveredIndex === index ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
+                        <h3 className="text-sm font-semibold mb-1">
+                          {artwork.title}
+                        </h3>
+                        <p className="text-xs opacity-90">
+                          {artwork.medium} • {artwork.year}
+                        </p>
+                        <p className="text-xs mt-2 opacity-75">
+                          {artwork.description[0]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Selected Artwork Detail View */}
+        {selectedIndex !== null && (
+          <div className="py-8 pb-6">
+            <div className="space-y-6">
+              {/* Image */}
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <Image
+                  src={artworks[selectedIndex].image}
+                  alt={artworks[selectedIndex].title}
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Footer */}
+        <footer>
+          <div className="py-6">
+            <p className="text-xs text-gray-500 text-center">
+              © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights
+              Reserved
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );

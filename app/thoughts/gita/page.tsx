@@ -166,10 +166,10 @@ export default function GitaPage() {
                 reflections on the bhagavad gita
               </h1>
               <Link
-                href="/"
+                href="/thoughts"
                 className="underline text-gray-600 hover:text-gray-900 transition-colors text-sm whitespace-nowrap ml-4"
               >
-                back home
+                back to thoughts
               </Link>
             </div>
           </div>
