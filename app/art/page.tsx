@@ -231,7 +231,7 @@ export default function ArtPortfolio() {
 
         {/* Masonry Gallery - Balanced Layout */}
         {selectedIndex === null && (
-          <div className="py-8 pb-6">
+          <div className="pt-8 pb-0">
             <div className="columns-1 md:columns-2 gap-6 space-y-6">
               {artworks.map((artwork, index) => (
                 <div
@@ -287,7 +287,7 @@ export default function ArtPortfolio() {
 
         {/* Selected Artwork Detail View */}
         {selectedIndex !== null && (
-          <div className="py-8 pb-6">
+          <div className="pt-8 pb-0">
             <div className="space-y-6">
               {/* Image */}
               <div className="bg-gray-100 rounded-lg overflow-hidden">
@@ -303,9 +303,11 @@ export default function ArtPortfolio() {
           </div>
         )}
 
+        <div className="border-t border-gray-200 mt-8"></div>
+
         {/* Footer */}
-        <footer>
-          <div className="py-6">
+        <footer className="mt-6">
+          <div className="py-3">
             <p className="text-xs text-gray-500 text-center">
               © {new Date().getFullYear()} Jathin Pranav Singaraju • All Rights
               Reserved
