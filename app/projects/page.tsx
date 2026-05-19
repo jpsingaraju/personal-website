@@ -3,6 +3,14 @@ import Link from "next/link";
 const log = [
   {
     date: "2026",
+    href: "https://slato.app",
+    name: "slato",
+    desc: "ai slides maker + editor",
+    star: true,
+    external: true,
+  },
+  {
+    date: "2026",
     href: "https://devpost.com/software/moonshot-6wpvf7",
     name: "moonshot",
     desc: "generative game engine for trading",
@@ -75,13 +83,6 @@ const log = [
     desc: "certainty as a service",
     tag: "babhacks 2nd",
     star: true,
-    external: true,
-  },
-  {
-    date: "2025",
-    href: "https://kinetikgigs.com",
-    name: "kinetik",
-    desc: "intel layer for recruiting",
     external: true,
   },
   {

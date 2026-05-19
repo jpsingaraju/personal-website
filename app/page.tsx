@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiDevpost } from "react-icons/si";
 
 export default function Home(): JSX.Element {
   const [showVercel, setShowVercel] = useState(false);
