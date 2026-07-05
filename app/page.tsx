@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
             <li>- building cool stuff</li>
-            <li>- studying eecs + biz @ uc berkeley M.E.T.</li>
+            <li>- studying @ uc berkeley M.E.T.</li>
             <li>
               - incoming intern @{" "}
               <span
@@ -67,7 +67,7 @@ export default function Home(): JSX.Element {
             <li>- swe @ hp + other startups</li>
             <li>- barry m goldwater scholar</li>
             <li>
-              — ai/ml researcher —&gt; publications
+              — ai/ml research (publications
               <span className="text-xs align-super">
                 [
                 <Link
@@ -107,6 +107,7 @@ export default function Home(): JSX.Element {
               >
                 patent
               </Link>
+              )
             </li>
           </ul>
         </section>

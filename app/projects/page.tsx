@@ -34,13 +34,6 @@ const log = [
   },
   {
     date: "2026",
-    href: "https://github.com/jpsingaraju/giannis-kalshi-bot",
-    name: "giannis",
-    desc: "twitter + kalshi bot for giannis nba trade",
-    external: true,
-  },
-  {
-    date: "2026",
     href: "https://github.com/jpsingaraju/nfl-clip-coach",
     name: "clippr",
     desc: "ask a question, get the nfl clip",
