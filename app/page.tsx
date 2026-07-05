@@ -10,17 +10,13 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="h-dvh flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
-      <main className="max-w-2xl w-full space-y-8 sm:space-y-8">
+      <main className="max-w-xl w-full space-y-8 sm:space-y-8">
         <section className="space-y-2">
           <div className="text-lg sm:text-xl font-bold">
             jathin pranav singaraju
           </div>
           <p className="text-xs sm:text-sm text-gray-600">
-            builder, hooper,{" "}
-            <Link href="/art" className="hover:text-gray-900 transition-colors">
-              artist
-            </Link>
-            , and poker degen ;)
+            builder, hooper, artist, and poker degen ;)
           </p>
         </section>
 

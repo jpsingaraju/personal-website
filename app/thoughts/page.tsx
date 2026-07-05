@@ -13,7 +13,7 @@ const thoughts = [
 export default function ThoughtsIndex(): JSX.Element {
   return (
     <div className="min-h-screen bg-white font-mono flex justify-center px-4 sm:px-6">
-      <div className="max-w-2xl w-full">
+      <div className="max-w-xl w-full">
         <header>
           <div className="py-6">
             <div className="flex justify-between items-start mt-4">

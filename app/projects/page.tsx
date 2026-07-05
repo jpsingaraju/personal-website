@@ -13,7 +13,7 @@ const log = [
     date: "2026",
     href: "https://devpost.com/software/moonshot-6wpvf7",
     name: "moonshot",
-    desc: "generative game engine for trading",
+    desc: "generative trading game engine",
     tag: "babhacks 2nd",
     external: true,
   },
@@ -65,7 +65,7 @@ const log = [
     date: "2025",
     href: "https://x.com/jpsingaraju/status/1982939253463290265",
     name: "harmoniq",
-    desc: "medical cross-border compliance",
+    desc: "drug cross-border compliance",
     tag: "calhacks 1st",
     external: true,
   },
@@ -104,7 +104,7 @@ const log = [
     date: "2024",
     href: "https://devpost.com/software/nova-your-automated-pa",
     name: "nova ai",
-    desc: "your automated personal assistant",
+    desc: "your automated pa",
     tag: "calhacks 2nd",
     external: true,
   },
@@ -169,7 +169,7 @@ const years = [...new Set(log.map((e) => e.date))].sort(
 export default function BuildLog(): JSX.Element {
   return (
     <div className="min-h-screen bg-white font-mono flex justify-center px-4 sm:px-6">
-      <div className="max-w-2xl w-full">
+      <div className="max-w-xl w-full">
         <header>
           <div className="py-6">
             <div className="flex justify-between items-start mt-4">

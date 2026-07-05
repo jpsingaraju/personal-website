@@ -168,7 +168,7 @@ export default function ArtPortfolio() {
 
   return (
     <div className="min-h-screen bg-white font-mono flex justify-center px-4 sm:px-6">
-      <div className="max-w-2xl w-full">
+      <div className="max-w-xl w-full">
         {/* Header */}
         <header>
           <div className="py-6">
@@ -211,7 +211,7 @@ export default function ArtPortfolio() {
                 knowledge.
               </p>
               <p className="text-xs text-gray-500 italic pt-1">
-                A sincere thank you to Ms. Rosie and Mr. Buscemi for making me
+                Thank you to Ms. Rosie and Mr. Buscemi for making me
                 the artist I am today!
               </p>
             </div>
