@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,22 +12,30 @@ export default function Home(): JSX.Element {
   return (
     <div className="h-dvh flex items-center justify-center px-4 sm:px-6 font-mono overflow-hidden">
       <main className="max-w-xl w-full space-y-8 sm:space-y-8">
-        <section className="space-y-2">
-          <div className="text-lg sm:text-xl font-bold">
-            jathin pranav singaraju
+        <section className="flex items-center gap-4">
+          <Image
+            src="/circular-photo.png"
+            alt="jathin pranav singaraju"
+            width={128}
+            height={128}
+            quality={100}
+            className="rounded-full object-cover w-[3.75rem] h-[3.75rem] flex-shrink-0"
+          />
+          <div>
+            <div className="text-lg sm:text-xl font-bold">
+              jathin pranav singaraju
+            </div>
+            <p className="text-xs sm:text-sm text-gray-600">
+              builder, hooper, artist, poker degen ;)
+            </p>
           </div>
-          <p className="text-xs sm:text-sm text-gray-600">
-            builder, hooper, artist, and poker degen ;)
-          </p>
         </section>
 
         <section className="space-y-1">
           <h2 className="text-xs sm:text-sm font-semibold">currently:</h2>
           <ul className="space-y-0.5 text-gray-600 text-xs sm:text-sm">
-            <li>- building cool stuff</li>
-            <li>- studying @ uc berkeley M.E.T.</li>
             <li>
-              - incoming intern @{" "}
+              - building cool stuff @{" "}
               <span
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setShowVercel(true)}
@@ -52,8 +61,8 @@ export default function Home(): JSX.Element {
                   vercel
                 </span>
               </span>
-              (summer 2026)
             </li>
+            <li>- studying @ uc berkeley M.E.T.</li>
           </ul>
         </section>
 
@@ -63,7 +72,7 @@ export default function Home(): JSX.Element {
             <li>- swe @ hp + other startups</li>
             <li>- barry m goldwater scholar</li>
             <li>
-              — ai/ml research (publications
+              — ai/ml researcher (publications
               <span className="text-xs align-super">
                 [
                 <Link
